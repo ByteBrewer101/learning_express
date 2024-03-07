@@ -13,8 +13,8 @@ const port = 4000
 // Define a schema for request body validation using Zod
 const schema = zod.object(
     {
-        username: zod.string(),
-        password: zod.string(),
+        username: zod.string().email(),
+        password: zod.string().min(5),
         age: zod.number(),
         country: zod.literal("US").or(zod.literal("UK"))
     }
