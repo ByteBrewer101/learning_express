@@ -6,13 +6,20 @@ const app = express() // Creating an instance of the Express application
 
 const schema = zod.array(zod.number()); // Creating a Zod schema for validating an array of numbers
 
+
 app.use(express.json()) // Adding middleware to parse JSON request bodies
 
 
-app.get('/',(req,res)=>{
+app.post('/',(req,res)=>{
 
 const kidneys = req.body.kidneys; // Extracting the 'kidneys' field from the request body
 const response = schema.safeParse(kidneys) // Validating the 'kidneys' array against the Zod schema
+
+if (!response.success)
+{
+    res.status(403).send("error")
+}
+else
 res.send(response) // Sending the response
 
 })
