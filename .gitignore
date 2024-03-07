@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# runtime data
+npm-debug.log*
+
+# production
+/dist
+/build
+
+# dotenv environment variables file
+.env
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode
+.idea
+
+# Log files
+*.log
