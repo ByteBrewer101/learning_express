@@ -7,7 +7,7 @@ app.use(express.json())
 
 const ALL_USERS = [
   {
-    username: "harkirat@gmail.com",
+    username: "example1@gmail.com",
     password: "123",
     name: "Name1 singh",
   },
