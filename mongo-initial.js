@@ -16,7 +16,7 @@ app.get('/signup',async (req,res)=>{
     const username1 = req.body.username
     const email = req.body.email
     const password = req.body.password
-const userex = await usermodel.findOne({username1 : name})
+const userex = await usermodel.findOne({username1 : name})    
 if(userex){
     res.status(200).json({msg : "user already exists"})
 }
